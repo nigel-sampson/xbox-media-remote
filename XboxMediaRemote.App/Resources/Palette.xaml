@@ -1,0 +1,9 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="XboxGreenColor">#FF107C10</Color>
+    
+    <SolidColorBrush x:Key="XboxGreenBrush" Color="{StaticResource XboxGreenColor}" />
+
+</ResourceDictionary>

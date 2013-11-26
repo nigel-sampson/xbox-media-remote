@@ -15,8 +15,10 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="XboxMediaRemote.App.App">
-      <m2:VisualElements DisplayName="XboxMediaRemote.App" Square150x150Logo="Resources\Images\System\Logo.png" Square30x30Logo="Resources\Images\System\SmallLogo.png" Description="XboxMediaRemote.App" ForegroundText="light" BackgroundColor="#464646">
-        <m2:SplashScreen Image="Resources\Images\System\SplashScreen.png" />
+      <m2:VisualElements DisplayName="Xbox Media Remote" Square150x150Logo="Resources\Images\System\Logo.png" Square30x30Logo="Resources\Images\System\SmallLogo.png" Description="Play To remote for Xbox 360 and Xbox One" ForegroundText="light" BackgroundColor="#107C10">
+        <m2:DefaultTile Square70x70Logo="Resources\Images\System\TileLogo.png">
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Resources\Images\System\SplashScreen.png" BackgroundColor="#107C10" />
       </m2:VisualElements>
     </Application>
   </Applications>
