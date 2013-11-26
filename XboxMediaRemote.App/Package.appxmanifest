@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="f9e742a6-216c-4957-bb37-36deccaa080b" Publisher="CN=Nigel" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>XboxMediaRemote.App</DisplayName>
+    <PublisherDisplayName>Nigel</PublisherDisplayName>
+    <Logo>Resources\Images\System\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="XboxMediaRemote.App.App">
+      <m2:VisualElements DisplayName="XboxMediaRemote.App" Square150x150Logo="Resources\Images\System\Logo.png" Square30x30Logo="Resources\Images\System\SmallLogo.png" Description="XboxMediaRemote.App" ForegroundText="light" BackgroundColor="#464646">
+        <m2:SplashScreen Image="Resources\Images\System\SplashScreen.png" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="privateNetworkClientServer" />
+    <Capability Name="videosLibrary" />
+    <Capability Name="picturesLibrary" />
+    <Capability Name="musicLibrary" />
+  </Capabilities>
+</Package>
