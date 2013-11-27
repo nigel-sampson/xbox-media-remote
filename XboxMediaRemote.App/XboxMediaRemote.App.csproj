@@ -113,9 +113,14 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\MediaServersListViewModel.cs" />
-    <Compile Include="Views\MediaServersListView.xaml.cs">
-      <DependentUpon>MediaServersListView.xaml</DependentUpon>
+    <Compile Include="ViewModels\MediaHubViewModel.cs" />
+    <Compile Include="ViewModels\MediaServerListViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\MediaHubView.xaml.cs">
+      <DependentUpon>MediaHubView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MediaServerListView.xaml.cs">
+      <DependentUpon>MediaServerListView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -123,9 +128,13 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="packages.config" />
+    <PRIResource Include="Resources\En\Resources.resw" />
     <None Include="XboxMediaRemote.App_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Images\Icon.scale-100.png" />
+    <Content Include="Resources\Images\Icon.scale-140.png" />
+    <Content Include="Resources\Images\Icon.scale-180.png" />
     <Content Include="Resources\Images\System\Logo.scale-100.png" />
     <Content Include="Resources\Images\System\Logo.scale-140.png" />
     <Content Include="Resources\Images\System\Logo.scale-180.png" />
@@ -167,12 +176,21 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="Resources\Controls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
     <Page Include="Resources\Palette.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
-    <Page Include="Views\MediaServersListView.xaml">
+    <Page Include="Views\MediaHubView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MediaServerListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

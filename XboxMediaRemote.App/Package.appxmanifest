@@ -27,5 +27,6 @@
     <Capability Name="videosLibrary" />
     <Capability Name="picturesLibrary" />
     <Capability Name="musicLibrary" />
+    <Capability Name="internetClientServer" />
   </Capabilities>
 </Package>

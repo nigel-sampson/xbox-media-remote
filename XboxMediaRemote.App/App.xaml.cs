@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Windows.ApplicationModel.Activation;
-using Windows.UI.Xaml.Controls;
 using Caliburn.Micro;
 using XboxMediaRemote.App.ViewModels;
-using XboxMediaRemote.App.Views;
 
 namespace XboxMediaRemote.App
 {
@@ -21,7 +19,7 @@ namespace XboxMediaRemote.App
         {
             base.OnLaunched(args);
 
-            DisplayRootView<MediaServersListView>();
+            DisplayRootViewFor<MediaHubViewModel>();
         }
 
         protected override void Configure()
@@ -29,12 +27,7 @@ namespace XboxMediaRemote.App
             container = new WinRTContainer();
 
             container
-                .PerRequest<MediaServersListViewModel>();
-        }
-
-        protected override void PrepareViewFirst(Frame rootFrame)
-        {
-            container.RegisterNavigationService(rootFrame);
+                .PerRequest<MediaHubViewModel>();
         }
 
         protected override void BuildUp(object instance)
