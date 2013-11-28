@@ -135,6 +135,9 @@
     <Content Include="Resources\Images\Icon.scale-100.png" />
     <Content Include="Resources\Images\Icon.scale-140.png" />
     <Content Include="Resources\Images\Icon.scale-180.png" />
+    <Content Include="Resources\Images\Menu.scale-100.png" />
+    <Content Include="Resources\Images\Menu.scale-140.png" />
+    <Content Include="Resources\Images\Menu.scale-180.png" />
     <Content Include="Resources\Images\System\Logo.scale-100.png" />
     <Content Include="Resources\Images\System\Logo.scale-140.png" />
     <Content Include="Resources\Images\System\Logo.scale-180.png" />

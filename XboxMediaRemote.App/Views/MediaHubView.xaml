@@ -15,7 +15,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <controls:Sidebar Background="{StaticResource SidebarBackgroundBrush}" RequestedTheme="Dark">
+        <controls:Sidebar x:Name="HubSidebar" Background="{StaticResource SidebarBackgroundBrush}" RequestedTheme="Dark">
             <controls:Sidebar.ExpandedContentTemplate>
                 <DataTemplate>
                     <Grid>
@@ -25,10 +25,20 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
 
-                        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Bottom">
-                            <Image Source="/Resources/Images/Icon.png" Height="40" Margin="40,0,20,20"></Image>
-                            <TextBlock x:Uid="MediaHubTitle" Style="{StaticResource SubheaderTextBlockStyle}"/>
-                        </StackPanel>
+                        <Grid Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" Margin="0,0,0,20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            
+                            <Image Source="/Resources/Images/Icon.png" Height="27" Margin="40,0,20,0" />
+                            <TextBlock x:Uid="MediaHubTitle" Grid.Column="1" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,0,0,10"/>
+                            <Button Style="{StaticResource ContentButton}" Grid.Column="2" Margin="0,15,20,0" Click="OnCollapseSidebar">
+                                <Image Source="/Resources/Images/Menu.png" Height="16" />    
+                            </Button>
+                            
+                        </Grid>
 
                         <SearchBox x:Uid="RepositorySearch" x:Name="RepositorySearch" Grid.Row="1" Grid.Column="0" Margin="20,0,20,20" BorderThickness="0" Padding="15,10,15,5"
                                    FocusOnKeyboardInput="True" SearchHistoryEnabled="False"/>
@@ -42,7 +52,22 @@
             </controls:Sidebar.ExpandedContentTemplate>
             <controls:Sidebar.CollapsedContentTemplate>
                 <DataTemplate>
-                    
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Button Style="{StaticResource ContentButton}" Click="OnExpandSidebar" HorizontalAlignment="Center"
+                                    Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" Margin="0,0,0,20">
+                            <Image Source="/Resources/Images/Menu.png" Height="16" />
+                        </Button>
+
+                        <Button Grid.Row="1" FontFamily="{ThemeResource SymbolThemeFontFamily}" FontSize="26.667" HorizontalAlignment="Center" 
+                                Content="&#xE094;" Style="{StaticResource ContentButton}" Click="OnExpandSidebar" />
+
+                    </Grid>
                 </DataTemplate>
             </controls:Sidebar.CollapsedContentTemplate>
         </controls:Sidebar>
