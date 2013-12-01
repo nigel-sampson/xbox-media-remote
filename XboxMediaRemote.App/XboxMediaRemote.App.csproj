@@ -116,11 +116,15 @@
     <Compile Include="ViewModels\MediaHubViewModel.cs" />
     <Compile Include="ViewModels\MediaServerListViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\WelcomeViewModel.cs" />
     <Compile Include="Views\MediaHubView.xaml.cs">
       <DependentUpon>MediaHubView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MediaServerListView.xaml.cs">
       <DependentUpon>MediaServerListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WelcomeView.xaml.cs">
+      <DependentUpon>WelcomeView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +198,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MediaServerListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WelcomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

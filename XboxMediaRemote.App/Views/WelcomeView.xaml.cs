@@ -2,9 +2,9 @@
 
 namespace XboxMediaRemote.App.Views
 {
-    public sealed partial class MediaServerListView
+    public sealed partial class WelcomeView
     {
-        public MediaServerListView()
+        public WelcomeView()
         {
             InitializeComponent();
         }

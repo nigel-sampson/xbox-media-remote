@@ -27,6 +27,9 @@ namespace XboxMediaRemote.App
             container = new WinRTContainer();
 
             container
+                .Instance(container);
+
+            container
                 .PerRequest<MediaHubViewModel>();
         }
 

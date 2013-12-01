@@ -32,7 +32,7 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             
-                            <Image Source="/Resources/Images/Icon.png" Height="27" Margin="40,0,20,0" />
+                            <Image Source="/Resources/Images/Icon.png" Height="27" Margin="20,0,20,0" />
                             <TextBlock x:Uid="MediaHubTitle" Grid.Column="1" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,0,0,10"/>
                             <Button Style="{StaticResource ContentButton}" Grid.Column="2" Margin="0,15,20,0" Click="OnCollapseSidebar">
                                 <Image Source="/Resources/Images/Menu.png" Height="16" />    
@@ -71,5 +71,7 @@
                 </DataTemplate>
             </controls:Sidebar.CollapsedContentTemplate>
         </controls:Sidebar>
+        
+        <Frame x:Name="RootFrame" Grid.Column="1" cm:Message.Attach="RegisterFrame($source)" />
     </Grid>
 </Page>
