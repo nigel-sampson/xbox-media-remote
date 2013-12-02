@@ -21,7 +21,7 @@ namespace XboxMediaRemote.App.ViewModels
         {
             base.OnInitialize();
 
-            var serverFolders = await KnownFolders.MediaServerDevices.GetFoldersAsync();
+            var serverFolders = await KnownFolders.VideosLibrary.GetFoldersAsync();
             var serverViewModels = serverFolders.Select(f => new MediaServerListViewModel(f));
 
             Servers.AddRange(serverViewModels);

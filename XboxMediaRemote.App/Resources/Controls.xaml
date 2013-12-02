@@ -17,7 +17,7 @@
     </Style>
 
     <Style x:Key="MenuListBoxStyle" TargetType="ListBox">
-        <Setter Property="Foreground" Value="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
+        <Setter Property="Foreground" Value="{ThemeResource ApplicationForegroundThemeBrush}"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.HorizontalScrollMode" Value="Disabled"/>
@@ -30,7 +30,8 @@
         <Setter Property="IsTabStop" Value="False"/>
         <Setter Property="TabNavigation" Value="Once"/>
         <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
-        <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="Light" />
         <Setter Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
@@ -87,7 +88,7 @@
                                 <VisualState x:Name="PointerOver">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="LayoutRoot">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ListBoxItemPointerOverBackgroundThemeBrush}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource MenuListBoxItemHoverBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -104,7 +105,7 @@
                                 <VisualState x:Name="Pressed">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="LayoutRoot">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ListBoxItemPointerOverBackgroundThemeBrush}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource MenuListBoxItemPressedBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                         <PointerDownThemeAnimation TargetName="ContentPresenter"/>
                                     </Storyboard>
@@ -165,7 +166,7 @@
                         <Grid x:Name="InnerGrid" Background="Transparent">
                             <Rectangle x:Name="SelectedBackground" RenderTransformOrigin="0.5,0.5" Fill="{StaticResource MenuListBoxItemSelectedBrush}">
                                 <Rectangle.RenderTransform>
-                                    <CompositeTransform TranslateX="-320"/>
+                                    <CompositeTransform TranslateX="-460"/>
                                 </Rectangle.RenderTransform>
                             </Rectangle>
                             <ContentPresenter x:Name="ContentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>

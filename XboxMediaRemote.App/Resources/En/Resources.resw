@@ -120,4 +120,7 @@
   <data name="MediaHubTitle.Text" xml:space="preserve">
     <value>Xbox Media Remote</value>
   </data>
+  <data name="MediaSearch.PlaceholderText" xml:space="preserve">
+    <value>Search</value>
+  </data>
 </root>

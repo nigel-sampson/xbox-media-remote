@@ -16,6 +16,8 @@
 
     <SolidColorBrush x:Key="MenuBackgroundBrush" Color="{StaticResource SidebarBackgroundColor}" />
     <SolidColorBrush x:Key="MenuListBoxItemSelectedBrush" Color="{StaticResource XboxGreenColor}" />
+    <SolidColorBrush x:Key="MenuListBoxItemHoverBrush" Color="#FF3A3A3A" />
+    <SolidColorBrush x:Key="MenuListBoxItemPressedBrush" Color="#FF646464" />
 
     <!-- Theme Overrides -->
     <SolidColorBrush x:Key="TextBoxPlaceholderTextThemeBrush" Color="#DEFFFFFF" />
