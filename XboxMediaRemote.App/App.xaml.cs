@@ -30,7 +30,8 @@ namespace XboxMediaRemote.App
                 .Instance(container);
 
             container
-                .PerRequest<MediaHubViewModel>();
+                .PerRequest<MediaHubViewModel>()
+                .PerRequest<BrowseMediaFolderViewModel>();
         }
 
         protected override void BuildUp(object instance)

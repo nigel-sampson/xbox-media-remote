@@ -26,7 +26,7 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
 
-                        <Grid Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" Margin="0,0,0,20">
+                        <Grid Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" Margin="0,0,0,10">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
@@ -78,6 +78,6 @@
             </controls:Sidebar.CollapsedContentTemplate>
         </controls:Sidebar>
         
-        <Frame x:Name="RootFrame" Grid.Column="1" cm:Message.Attach="RegisterFrame($source)" SourcePageType="views:WelcomeView" />
+        <Frame x:Name="RootFrame" Grid.Column="1" cm:Message.Attach="RegisterFrame($source)" SourcePageType="views:WelcomeView" DataContext="{x:Null}" />
     </Grid>
 </Page>

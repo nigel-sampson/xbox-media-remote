@@ -11,6 +11,7 @@ namespace XboxMediaRemote.App.ViewModels
     public class MediaHubViewModel : ViewModelBase
     {
         private readonly WinRTContainer container;
+        private INavigationService navigationService;
 
         public MediaHubViewModel(WinRTContainer container)
         {
@@ -43,12 +44,19 @@ namespace XboxMediaRemote.App.ViewModels
         public void RegisterFrame(Frame frame)
         {
             container.RegisterNavigationService(frame);
+
+            navigationService = container.GetInstance<INavigationService>();
         }
 
         public MediaServerListViewModel SelectedServer
         {
             get;
             set;
+        }
+
+        public void OnSelectedServerChanged()
+        {
+            navigationService.NavigateToViewModel<BrowseMediaFolderViewModel>(SelectedServer.Folder);
         }
 
         public BindableCollection<MediaServerListViewModel> Servers

@@ -22,6 +22,14 @@ namespace XboxMediaRemote.App.ViewModels
             }
         }
 
+        public StorageFolder Folder
+        {
+            get
+            {
+                return folder;
+            }
+        }
+
         public bool IsLocal
         {
             get
