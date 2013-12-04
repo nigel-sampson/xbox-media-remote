@@ -15,6 +15,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>XboxMediaRemote.App_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <FodyPath>..\packages\Fody.1.18.0.0</FodyPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -115,6 +116,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\MediaHubViewModel.cs" />
     <Compile Include="ViewModels\MediaServerListViewModel.cs" />
+    <Compile Include="ViewModels\PageViewModelBase.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />
     <Compile Include="Views\MediaHubView.xaml.cs">
@@ -131,11 +133,17 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="Fody.targets" />
     <None Include="packages.config" />
     <PRIResource Include="Resources\En\Resources.resw" />
     <None Include="XboxMediaRemote.App_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FodyWeavers.xml" />
+    <Content Include="Resources\Images\Heroes\1FHSeES.jpg" />
+    <Content Include="Resources\Images\Heroes\3PozNYo.jpg" />
+    <Content Include="Resources\Images\Heroes\JiqEuiJ.jpg" />
+    <Content Include="Resources\Images\Heroes\VF9ckU0.jpg" />
     <Content Include="Resources\Images\Icon.scale-100.png" />
     <Content Include="Resources\Images\Icon.scale-140.png" />
     <Content Include="Resources\Images\Icon.scale-180.png" />
@@ -180,6 +188,10 @@
     <Reference Include="Microsoft.Xaml.Interactivity">
       <HintPath>..\packages\Caliburn.Micro.2.0.0-alpha2\lib\win81\Microsoft.Xaml.Interactivity.dll</HintPath>
     </Reference>
+    <Reference Include="PropertyChanged">
+      <HintPath>..\packages\PropertyChanged.Fody.1.42.0.0\Lib\portable-net4+sl4+wp7+win8+MonoAndroid16+MonoTouch40\PropertyChanged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -210,6 +222,7 @@
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="Fody.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

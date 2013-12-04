@@ -123,4 +123,13 @@
   <data name="MediaSearch.PlaceholderText" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="WelcomeApp.Text" xml:space="preserve">
+    <value>to Xbox Media Remote</value>
+  </data>
+  <data name="WelcomeSubheader.Text" xml:space="preserve">
+    <value>Browse local and remote media servers and play them to your Xbox One and Xbox 360.</value>
+  </data>
+  <data name="WelcomeTitle.Text" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
 </root>

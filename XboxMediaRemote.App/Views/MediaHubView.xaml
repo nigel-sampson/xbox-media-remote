@@ -6,6 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:XboxMediaRemote.Core.Controls"
     xmlns:cm="using:Caliburn.Micro"
+    xmlns:views="using:XboxMediaRemote.App.Views"
     mc:Ignorable="d"
     RequestedTheme="Light">
 
@@ -53,7 +54,7 @@
             </controls:Sidebar.ExpandedContentTemplate>
             <controls:Sidebar.CollapsedContentTemplate>
                 <DataTemplate>
-                    <Grid>
+                    <Grid cm:Bind.Model="{Binding}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="100"/>
                             <RowDefinition Height="60"/>
@@ -68,11 +69,15 @@
                         <Button Grid.Row="1" FontFamily="{ThemeResource SymbolThemeFontFamily}" FontSize="26.667" HorizontalAlignment="Center" 
                                 Content="&#xE094;" Style="{StaticResource ContentButton}" Click="OnExpandSidebar" />
 
+                        <StackPanel Grid.Row="2" Grid.Column="0">
+                            <ListBox x:Name="Servers" Style="{StaticResource MenuListBoxStyle}" ItemContainerStyle="{StaticResource MenuListBoxItemStyle}"  cm:View.Context="Test"/>
+                        </StackPanel>
+
                     </Grid>
                 </DataTemplate>
             </controls:Sidebar.CollapsedContentTemplate>
         </controls:Sidebar>
         
-        <Frame x:Name="RootFrame" Grid.Column="1" cm:Message.Attach="RegisterFrame($source)" />
+        <Frame x:Name="RootFrame" Grid.Column="1" cm:Message.Attach="RegisterFrame($source)" SourcePageType="views:WelcomeView" />
     </Grid>
 </Page>
