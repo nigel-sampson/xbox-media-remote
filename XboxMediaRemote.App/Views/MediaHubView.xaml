@@ -46,7 +46,13 @@
                                    FocusOnKeyboardInput="True" SearchHistoryEnabled="False"/>
 
                         <StackPanel Grid.Row="2" Grid.Column="0">
-                            <ListBox x:Name="Servers" Style="{StaticResource MenuListBoxStyle}" ItemContainerStyle="{StaticResource MenuListBoxItemStyle}" />
+                            <ListBox x:Name="Servers" Style="{StaticResource MenuListBoxStyle}" ItemContainerStyle="{StaticResource MenuListBoxItemStyle}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <ContentControl cm:View.Model="{Binding}" cm:View.Context="Expanded" />
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
                         </StackPanel>
 
                     </Grid>
@@ -70,7 +76,13 @@
                                 Content="&#xE094;" Style="{StaticResource ContentButton}" Click="OnExpandSidebar" />
 
                         <StackPanel Grid.Row="2" Grid.Column="0">
-                            <ListBox x:Name="Servers" Style="{StaticResource MenuListBoxStyle}" ItemContainerStyle="{StaticResource MenuListBoxItemStyle}"  cm:View.Context="Test"/>
+                            <ListBox x:Name="Servers" Style="{StaticResource MenuListBoxStyle}" ItemContainerStyle="{StaticResource CollapsedMenuListBoxItemStyle}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <ContentControl cm:View.Model="{Binding}" cm:View.Context="Collapsed" />
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
                         </StackPanel>
 
                     </Grid>

@@ -126,8 +126,11 @@
     <Compile Include="Views\MediaHubView.xaml.cs">
       <DependentUpon>MediaHubView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MediaServerListView.xaml.cs">
-      <DependentUpon>MediaServerListView.xaml</DependentUpon>
+    <Compile Include="Views\MediaServerList\Collapsed.xaml.cs">
+      <DependentUpon>Collapsed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MediaServerList\Expanded.xaml.cs">
+      <DependentUpon>Expanded.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WelcomeView.xaml.cs">
       <DependentUpon>WelcomeView.xaml</DependentUpon>
@@ -217,7 +220,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MediaServerListView.xaml">
+    <Page Include="Views\MediaServerList\Collapsed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MediaServerList\Expanded.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
