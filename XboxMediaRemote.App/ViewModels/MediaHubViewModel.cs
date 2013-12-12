@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using Windows.Storage;
 using Windows.UI.Xaml.Controls;
@@ -17,25 +19,25 @@ namespace XboxMediaRemote.App.ViewModels
         {
             this.container = container;
 
-            Servers = new BindableCollection<MediaServerListViewModel>();
+            Servers = new BindableCollection<MediaServerViewModel>();
         }
 
         protected override async void OnInitialize()
         {
             base.OnInitialize();
 
-            var localFolders = new []
+            var localFolders = new[]
             {
+                KnownFolders.MusicLibrary,
                 KnownFolders.PicturesLibrary,
                 KnownFolders.Playlists,
-                KnownFolders.MusicLibrary,
                 KnownFolders.VideosLibrary
             };
 
-            var localViewModels = localFolders.Select(f => new MediaServerListViewModel(f, isLocal: true));
+            var localViewModels = localFolders.Select(f => new MediaServerViewModel(f, isLocal: true));
 
             var serverFolders = await KnownFolders.MediaServerDevices.GetFoldersAsync();
-            var serverViewModels = serverFolders.Select(f => new MediaServerListViewModel(f));
+            var serverViewModels = serverFolders.Select(f => new MediaServerViewModel(f, isLocal: false));
 
             Servers.AddRange(localViewModels);
             Servers.AddRange(serverViewModels);
@@ -48,18 +50,33 @@ namespace XboxMediaRemote.App.ViewModels
             navigationService = container.GetInstance<INavigationService>();
         }
 
-        public MediaServerListViewModel SelectedServer
+        public MediaServerViewModel SelectedServer
         {
             get;
             set;
         }
 
-        public void OnSelectedServerChanged()
+        public async void OnSelectedServerChanged()
         {
-            navigationService.NavigateToViewModel<BrowseMediaFolderViewModel>(SelectedServer.Folder);
+            var folders = await SelectedServer.Folder.GetFoldersAsync();
+            var files = await SelectedServer.Folder.GetFilesAsync();
+
+            Debug.WriteLine("Folders");
+
+            foreach (var folder in folders)
+            {
+                Debug.WriteLine("{0}: {1}, {2}", folder.DisplayName, folder.Path, folder.FolderRelativeId);
+            }
+
+            Debug.WriteLine("Files");
+
+            foreach (var file in files)
+            {
+                Debug.WriteLine("{0}: {1}, {2}", file.DisplayName, file.Path, file.FolderRelativeId);
+            }
         }
 
-        public BindableCollection<MediaServerListViewModel> Servers
+        public BindableCollection<MediaServerViewModel> Servers
         {
             get;
             private set;

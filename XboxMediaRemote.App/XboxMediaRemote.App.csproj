@@ -116,7 +116,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BrowseMediaFolderViewModel.cs" />
     <Compile Include="ViewModels\MediaHubViewModel.cs" />
-    <Compile Include="ViewModels\MediaServerListViewModel.cs" />
+    <Compile Include="ViewModels\MediaServerViewModel.cs" />
     <Compile Include="ViewModels\PageViewModelBase.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />
@@ -126,10 +126,10 @@
     <Compile Include="Views\MediaHubView.xaml.cs">
       <DependentUpon>MediaHubView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MediaServerList\Collapsed.xaml.cs">
+    <Compile Include="Views\MediaServer\Collapsed.xaml.cs">
       <DependentUpon>Collapsed.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MediaServerList\Expanded.xaml.cs">
+    <Compile Include="Views\MediaServer\Expanded.xaml.cs">
       <DependentUpon>Expanded.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WelcomeView.xaml.cs">
@@ -220,11 +220,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MediaServerList\Collapsed.xaml">
+    <Page Include="Views\MediaServer\Collapsed.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MediaServerList\Expanded.xaml">
+    <Page Include="Views\MediaServer\Expanded.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

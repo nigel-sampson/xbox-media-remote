@@ -16,21 +16,6 @@ namespace XboxMediaRemote.App.ViewModels
         protected override async void OnInitialize()
         {
             base.OnInitialize();
-
-            var folders = await Parameter.GetFoldersAsync();
-            var files = await Parameter.GetFilesAsync();
-        }
-
-        public StorageFolder Parameter
-        {
-            get;
-            set;
-        }
-
-        public string Path
-        {
-            get;
-            set;
         }
     }
 }

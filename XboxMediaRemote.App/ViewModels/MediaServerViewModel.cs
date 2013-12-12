@@ -3,12 +3,12 @@ using Windows.Storage;
 
 namespace XboxMediaRemote.App.ViewModels
 {
-    public class MediaServerListViewModel
+    public class MediaServerViewModel
     {
         private readonly StorageFolder folder;
         private readonly bool isLocal;
 
-        public MediaServerListViewModel(StorageFolder folder, bool isLocal = false)
+        public MediaServerViewModel(StorageFolder folder, bool isLocal)
         {
             this.folder = folder;
             this.isLocal = isLocal;
