@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reactive.Disposables;
 using Caliburn.Micro;
 
 namespace XboxMediaRemote.App.ViewModels
@@ -23,6 +24,11 @@ namespace XboxMediaRemote.App.ViewModels
         public void GoBack()
         {
             navigationService.GoBack();
+        }
+
+        protected IDisposable Loading()
+        {
+            return Disposable.Create(() => { });
         }
     }
 }

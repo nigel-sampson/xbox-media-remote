@@ -109,7 +109,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\PlaceholderImage.cs" />
     <Compile Include="Controls\Sidebar.cs" />
+    <Compile Include="Extensions\AsyncEnumerableExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">

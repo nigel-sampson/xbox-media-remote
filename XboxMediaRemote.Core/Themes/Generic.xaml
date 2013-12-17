@@ -73,4 +73,51 @@
         </Setter>
     </Style>
 
+    <Style TargetType="controls:PlaceholderImage">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="Stretch" Value="UniformToFill" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:PlaceholderImage">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <ContentPresenter x:Name="PlaceholderContent"
+                                              Content="{TemplateBinding Content}"
+                                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                                              ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                              ContentTransitions="{TemplateBinding ContentTransitions}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <Image x:Name="PlaceholderImage"
+                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   Stretch="{TemplateBinding Stretch}"
+                                   Source="{TemplateBinding Source}"/>
+                        </Grid>
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="ImageStates">
+                                <VisualState x:Name="ImageLoaded">
+                                    <Storyboard>
+                                        <FadeInThemeAnimation TargetName="PlaceholderImage" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="ImageUnloaded">
+                                    <Storyboard>
+                                        <FadeOutThemeAnimation TargetName="PlaceholderImage" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
 </ResourceDictionary>

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Diagnostics.Tracing;
 using System.Linq;
 using Windows.Storage;
 using Windows.UI.Xaml.Controls;
@@ -56,24 +54,9 @@ namespace XboxMediaRemote.App.ViewModels
             set;
         }
 
-        public async void OnSelectedServerChanged()
+        public void OnSelectedServerChanged()
         {
-            var folders = await SelectedServer.Folder.GetFoldersAsync();
-            var files = await SelectedServer.Folder.GetFilesAsync();
-
-            Debug.WriteLine("Folders");
-
-            foreach (var folder in folders)
-            {
-                Debug.WriteLine("{0}: {1}, {2}", folder.DisplayName, folder.Path, folder.FolderRelativeId);
-            }
-
-            Debug.WriteLine("Files");
-
-            foreach (var file in files)
-            {
-                Debug.WriteLine("{0}: {1}, {2}", file.DisplayName, file.Path, file.FolderRelativeId);
-            }
+            navigationService.NavigateToViewModel<BrowseFolderViewModel>(SelectedServer.Folder);
         }
 
         public BindableCollection<MediaServerViewModel> Servers

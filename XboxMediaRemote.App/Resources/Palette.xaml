@@ -2,6 +2,12 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
+    <Color x:Key="PlaceholderBackgroundColor">#FFEBEBEB</Color>
+    <SolidColorBrush x:Key="PlaceholderBackgroundBrush" Color="{StaticResource PlaceholderBackgroundColor}" />
+
+    <Color x:Key="PlaceholderBorderColor">#FFE1E1E1</Color>
+    <SolidColorBrush x:Key="PlaceholderBorderBrush" Color="{StaticResource PlaceholderBorderColor}" />
+
     <Color x:Key="XboxGreenColor">#FF107C10</Color> 
     <SolidColorBrush x:Key="XboxGreenBrush" Color="{StaticResource XboxGreenColor}" />
 
