@@ -26,7 +26,7 @@
         
         <SemanticZoom x:Name="ItemsZoom" Grid.Row="2">
             <SemanticZoom.ZoomedInView>
-                <ListView ItemsSource="{Binding Source={StaticResource GroupsViewSource}}" IsSwipeEnabled="False" SelectionMode="None" Padding="40,0,0,40"
+                <ListView ItemsSource="{Binding Source={StaticResource GroupsViewSource}}" IsSwipeEnabled="False" SelectionMode="None" Padding="40,0,40,40"
                           IsItemClickEnabled="True" cm:Message.Attach="[Event ItemClick] = [SelectItem($eventArgs)]">
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -37,7 +37,7 @@
                         <GroupStyle>
                             <GroupStyle.HeaderTemplate>
                                 <DataTemplate>
-                                    <Button Style="{StaticResource ContentButton}" Content="{Binding Title}" Click="OnHeaderSelected" />
+                                    <Button FontSize="20" FontWeight="SemiBold" Style="{StaticResource ContentButton}" Content="{Binding Title}" Click="OnHeaderSelected" Padding="0,10,10,10"/>
                                 </DataTemplate>
                             </GroupStyle.HeaderTemplate>
                         </GroupStyle>
@@ -47,19 +47,33 @@
                             <ContentControl cm:View.Model="{Binding}" />
                         </DataTemplate>
                     </ListView.ItemTemplate>
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Margin" Value="0,0,2,2"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
                 </ListView>
             </SemanticZoom.ZoomedInView>
             <SemanticZoom.ZoomedOutView>
-                <ListView IsSwipeEnabled="False" SelectionMode="None" Padding="40,0,0,40">
+                <ListView IsSwipeEnabled="False" SelectionMode="None" Padding="40,0,40,40">
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <VirtualizingStackPanel Orientation="Vertical" />
                         </ItemsPanelTemplate>
                     </ListView.ItemsPanel>
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Border>
-                                <TextBlock Text="{Binding Group.Title}" />
+                            <Border Background="{ThemeResource SidebarBackgroundBrush}" RequestedTheme="Dark" Padding="10">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Group.Title}" FontSize="20" FontWeight="SemiBold" TextLineBounds="Full" />
+                                    <TextBlock Text="{Binding Group.Description}" Style="{StaticResource BodyTextBlockStyle}" TextLineBounds="Full" />
+                                </StackPanel>
                             </Border>
                         </DataTemplate>
                     </ListView.ItemTemplate>

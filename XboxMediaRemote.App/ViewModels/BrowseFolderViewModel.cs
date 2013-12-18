@@ -2,7 +2,6 @@
 using System.Linq;
 using Windows.Media.PlayTo;
 using Windows.Storage;
-using Windows.Storage.FileProperties;
 using Windows.UI.Xaml.Controls;
 using Caliburn.Micro;
 using PropertyChanged;
@@ -21,7 +20,7 @@ namespace XboxMediaRemote.App.ViewModels
         {
             this.navigationService = navigationService;
 
-            GroupedStorageItems = new BindableCollection<GroupViewModel<StorageItemViewModel>>();
+            GroupedStorageItems = new BindableCollection<StorageItemGroupViewModel>();
         }
 
         protected override async void OnInitialize()
@@ -39,7 +38,7 @@ namespace XboxMediaRemote.App.ViewModels
                 var itemViewModels = folderViewModels.Concat<StorageItemViewModel>(fileViewModels);
 
                 var groups = AlphaNumericGroups.GetExpressions()
-                    .Select(e => new GroupViewModel<StorageItemViewModel>(e.Key, itemViewModels.Where(i => e.Value.IsMatch(i.Name))))
+                    .Select(e => new StorageItemGroupViewModel(e.Key, itemViewModels.Where(i => e.Value.IsMatch(i.Name))))
                     .Where(g => g.Items.Any());
 
                 GroupedStorageItems.AddRange(groups);
@@ -63,7 +62,23 @@ namespace XboxMediaRemote.App.ViewModels
 
         private void OnPlayToSourceRequested(PlayToManager sender, PlayToSourceRequestedEventArgs args)
         {
+            var deferral = args.SourceRequest.GetDeferral();
+
+            Execute.OnUIThread(async () =>
+            {
+                var mediaElement = new MediaElement();
+
+                var stream = await latestFile.File.OpenReadAsync();
+
+                mediaElement.SetSource(stream, latestFile.File.ContentType);
+
+                args.SourceRequest.SetSource(mediaElement.PlayToSource);
+
+                deferral.Complete();    
+            });
         }
+
+        private StorageFileViewModel latestFile;
 
         public void SelectItem(ItemClickEventArgs e)
         {
@@ -77,6 +92,8 @@ namespace XboxMediaRemote.App.ViewModels
             }
             else
             {
+                latestFile = (StorageFileViewModel) itemViewModel;
+
                 PlayToManager.ShowPlayToUI();    
             }
         }
@@ -87,7 +104,7 @@ namespace XboxMediaRemote.App.ViewModels
             set;
         }
 
-        public BindableCollection<GroupViewModel<StorageItemViewModel>> GroupedStorageItems
+        public BindableCollection<StorageItemGroupViewModel> GroupedStorageItems
         {
             get; 
             private set; 

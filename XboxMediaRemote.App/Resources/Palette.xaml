@@ -50,4 +50,6 @@
     <SolidColorBrush x:Key="SearchBoxIMECandidateListSeparatorThemeBrush" Color="#FF2A2A2A"/>
     <SolidColorBrush x:Key="SearchBoxForegroundThemeBrush" Color="#DEFFFFFF" />
 
+    <SolidColorBrush x:Key="ListViewItemPointerOverBackgroundThemeBrush" Color="#FFC2C2C2" />
+
 </ResourceDictionary>

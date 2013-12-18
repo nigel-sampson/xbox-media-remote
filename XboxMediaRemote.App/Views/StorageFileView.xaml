@@ -22,10 +22,11 @@
             <Border Style="{StaticResource PlaceholderBorderStyle}">
                 <TextBlock Text="&#xE1C1;" Style="{StaticResource SymbolIconTextBlockStyle}" />
             </Border>
-            </controls:PlaceholderImage>
+        </controls:PlaceholderImage>
 
-            <StackPanel Grid.Row="1">
-            <TextBlock x:Name="File_DisplayName" />
+        <StackPanel Grid.Row="1">
+            <TextBlock x:Name="File_DisplayName" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap" MaxLines="3" />
+            <TextBlock x:Name="File_ContentType" Style="{StaticResource CaptionTextBlockStyle}" />
         </StackPanel>
 
 

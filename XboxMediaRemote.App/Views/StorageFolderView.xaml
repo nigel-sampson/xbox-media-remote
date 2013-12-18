@@ -24,8 +24,9 @@
             </Border>
         </controls:PlaceholderImage>
         
-        <StackPanel Grid.Row="1">
-            <TextBlock x:Name="Folder_DisplayName" />    
+        <StackPanel Grid.Row="1" Margin="0,10,0,0">
+            <TextBlock x:Name="Folder_DisplayName" Style="{StaticResource BodyTextBlockStyle}" />
+            <TextBlock x:Name="Folder_DisplayType" Style="{StaticResource CaptionTextBlockStyle}" />
         </StackPanel>
         
         

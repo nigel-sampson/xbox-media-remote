@@ -127,6 +127,7 @@
     <Compile Include="ViewModels\PageViewModelBase.cs" />
     <Compile Include="ViewModels\StorageFileViewModel.cs" />
     <Compile Include="ViewModels\StorageFolderViewModel.cs" />
+    <Compile Include="ViewModels\StorageItemGroupViewModel.cs" />
     <Compile Include="ViewModels\StorageItemViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />
