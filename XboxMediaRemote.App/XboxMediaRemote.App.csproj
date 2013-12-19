@@ -130,6 +130,7 @@
     <Compile Include="ViewModels\StorageFolderViewModel.cs" />
     <Compile Include="ViewModels\StorageItemGroupViewModel.cs" />
     <Compile Include="ViewModels\StorageItemViewModel.cs" />
+    <Compile Include="ViewModels\StorageListPageViewModelBase.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />
     <Compile Include="Views\BrowseFolderView.xaml.cs">

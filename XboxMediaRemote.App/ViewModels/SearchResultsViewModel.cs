@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Linq;
-using System.Runtime.InteropServices;
 using Windows.Storage;
 using Windows.Storage.FileProperties;
 using Windows.Storage.Search;
 using Caliburn.Micro;
-using XboxMediaRemote.Core.Extensions;
 
 namespace XboxMediaRemote.App.ViewModels
 {
-    public class SearchResultsViewModel : PageViewModelBase
+    public class SearchResultsViewModel : StorageListPageViewModelBase
     {
         public SearchResultsViewModel(INavigationService navigationService) 
             : base(navigationService)
         {
-            Results = new BindableCollection<StorageItemGroupViewModel>();
+
         }
 
         protected override async void OnInitialize()
@@ -59,20 +57,15 @@ namespace XboxMediaRemote.App.ViewModels
                     return null;
                 }).Where(v => v != null);
 
-                Results.Add(new StorageItemGroupViewModel(folder.DisplayName, itemViewModels));
+                GroupedStorageItems.Add(new StorageItemGroupViewModel(folder.DisplayName, itemViewModels));
             }
 
-            await Results.WhenAllAsync(g => g.Items.WhenAllAsync(i => i.LoadThumbnailAsync()));
+            await LoadThumbnailsAsync();
         }
 
         public string Query
         {
             get; set;
-        }
-
-        public BindableCollection<StorageItemGroupViewModel> Results
-        {
-            get; private set;
         }
     }
 }
