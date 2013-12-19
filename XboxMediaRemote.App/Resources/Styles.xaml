@@ -17,5 +17,5 @@
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="TextLineBounds" Value="Full" />
     </Style>
-
+    
 </ResourceDictionary>

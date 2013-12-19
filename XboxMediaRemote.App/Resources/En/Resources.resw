@@ -129,6 +129,12 @@
   <data name="MediaSearch.PlaceholderText" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="SearchResultsHeader.Text" xml:space="preserve">
+    <value>Search results for</value>
+  </data>
+  <data name="SearchResultsNone.Text" xml:space="preserve">
+    <value>No files or folders could be found that match the query.</value>
+  </data>
   <data name="WelcomeApp.Text" xml:space="preserve">
     <value>to Xbox Media Remote</value>
   </data>

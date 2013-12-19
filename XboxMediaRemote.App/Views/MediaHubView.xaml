@@ -42,8 +42,8 @@
                             
                         </Grid>
 
-                        <SearchBox x:Uid="MediaSearch" x:Name="RepositorySearch" Grid.Row="1" Grid.Column="0" Margin="20,0,20,20" BorderThickness="0" Padding="15,10,15,5"
-                                   FocusOnKeyboardInput="True" SearchHistoryEnabled="False"/>
+                        <SearchBox x:Uid="MediaSearch" x:Name="MediaSearch" Grid.Row="1" Grid.Column="0" Margin="20,0,20,20" BorderThickness="0" Padding="15,10,15,5"
+                                   FocusOnKeyboardInput="True" SearchHistoryEnabled="False" cm:Message.Attach="SearchMedia(MediaSearch)"/>
 
                         <StackPanel Grid.Row="2" Grid.Column="0">
                             <ListBox x:Name="Servers" Style="{StaticResource MenuListBoxStyle}" ItemContainerStyle="{StaticResource MenuListBoxItemStyle}">

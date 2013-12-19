@@ -125,6 +125,7 @@
     <Compile Include="ViewModels\MediaHubViewModel.cs" />
     <Compile Include="ViewModels\MediaServerViewModel.cs" />
     <Compile Include="ViewModels\PageViewModelBase.cs" />
+    <Compile Include="ViewModels\SearchResultsViewModel.cs" />
     <Compile Include="ViewModels\StorageFileViewModel.cs" />
     <Compile Include="ViewModels\StorageFolderViewModel.cs" />
     <Compile Include="ViewModels\StorageItemGroupViewModel.cs" />
@@ -142,6 +143,9 @@
     </Compile>
     <Compile Include="Views\MediaServer\Expanded.xaml.cs">
       <DependentUpon>Expanded.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchResultsView.xaml.cs">
+      <DependentUpon>SearchResultsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StorageFileView.xaml.cs">
       <DependentUpon>StorageFileView.xaml</DependentUpon>
@@ -261,6 +265,11 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+    <Page Include="Resources\Templates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
     <Page Include="Views\BrowseFolderView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -274,6 +283,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MediaServer\Expanded.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SearchResultsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

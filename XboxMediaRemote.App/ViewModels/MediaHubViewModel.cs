@@ -41,6 +41,13 @@ namespace XboxMediaRemote.App.ViewModels
             Servers.AddRange(serverViewModels);
         }
 
+        public void SearchMedia(string query)
+        {
+            navigationService.UriFor<SearchResultsViewModel>()
+                .WithParam(v => v.Query, query)
+                .Navigate();
+        }
+
         public void RegisterFrame(Frame frame)
         {
             container.RegisterNavigationService(frame);

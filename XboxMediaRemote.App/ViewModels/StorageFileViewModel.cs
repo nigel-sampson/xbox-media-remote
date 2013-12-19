@@ -40,7 +40,7 @@ namespace XboxMediaRemote.App.ViewModels
             }
         }
 
-        public async Task LoadThumbnailAsync()
+        public override async Task LoadThumbnailAsync()
         {
             using (var thumbnail = await File.GetThumbnailAsync(ThumbnailMode.ListView, 150, ThumbnailOptions.UseCurrentScale))
             {

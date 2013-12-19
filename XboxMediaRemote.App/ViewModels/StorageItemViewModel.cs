@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Windows.Storage;
 using Caliburn.Micro;
 
 namespace XboxMediaRemote.App.ViewModels
 {
-    public class StorageItemViewModel : PropertyChangedBase
+    public abstract class StorageItemViewModel : PropertyChangedBase
     {
         private readonly IStorageItem item;
 
-        public StorageItemViewModel(IStorageItem item)
+        protected StorageItemViewModel(IStorageItem item)
         {
             this.item = item;
         }
@@ -28,5 +29,7 @@ namespace XboxMediaRemote.App.ViewModels
                 return item.Name;
             }
         }
+
+        public abstract Task LoadThumbnailAsync();
     }
 }
