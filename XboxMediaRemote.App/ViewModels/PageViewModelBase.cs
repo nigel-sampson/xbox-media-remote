@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reactive.Disposables;
 using Caliburn.Micro;
+using XboxMediaRemote.App.Views;
 
 namespace XboxMediaRemote.App.ViewModels
 {
@@ -28,7 +29,9 @@ namespace XboxMediaRemote.App.ViewModels
 
         protected IDisposable Loading()
         {
-            return Disposable.Create(() => { });
+            View.GoToState(VisualStates.ContentStates.ContentLoading);
+
+            return Disposable.Create(() => View.GoToState(VisualStates.ContentStates.ContentLoaded));
         }
     }
 }

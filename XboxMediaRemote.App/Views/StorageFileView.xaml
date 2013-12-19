@@ -20,7 +20,7 @@
 
         <controls:PlaceholderImage Source="{Binding ThumbnailImage}">
             <Border Style="{StaticResource PlaceholderBorderStyle}">
-                <TextBlock Text="&#xE1C1;" Style="{StaticResource SymbolIconTextBlockStyle}" />
+                <TextBlock Text="&#xE132;" Style="{StaticResource SymbolIconTextBlockStyle}" />
             </Border>
         </controls:PlaceholderImage>
 

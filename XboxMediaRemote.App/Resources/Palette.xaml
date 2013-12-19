@@ -52,4 +52,7 @@
 
     <SolidColorBrush x:Key="ListViewItemPointerOverBackgroundThemeBrush" Color="#FFC2C2C2" />
 
+    <SolidColorBrush x:Key="ProgressBarForegroundThemeBrush" Color="{StaticResource XboxGreenColor}" />
+    <SolidColorBrush x:Key="ProgressBarIndeterminateForegroundThemeBrush" Color="{StaticResource XboxGreenColor}" />
+
 </ResourceDictionary>

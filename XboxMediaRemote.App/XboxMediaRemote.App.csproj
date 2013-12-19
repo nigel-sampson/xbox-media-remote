@@ -135,6 +135,7 @@
     <Compile Include="Views\BrowseFolderView.xaml.cs">
       <DependentUpon>BrowseFolderView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\IView.cs" />
     <Compile Include="Views\MediaHubView.xaml.cs">
       <DependentUpon>MediaHubView.xaml</DependentUpon>
     </Compile>
@@ -153,6 +154,8 @@
     <Compile Include="Views\StorageFolderView.xaml.cs">
       <DependentUpon>StorageFolderView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ViewBase.cs" />
+    <Compile Include="Views\VisualStates.cs" />
     <Compile Include="Views\WelcomeView.xaml.cs">
       <DependentUpon>WelcomeView.xaml</DependentUpon>
     </Compile>

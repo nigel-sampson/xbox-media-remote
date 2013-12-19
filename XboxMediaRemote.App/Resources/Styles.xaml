@@ -71,4 +71,8 @@
         </Setter>
     </Style>
 
+    <Style x:Key="EmptyHeaderTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource SubheaderTextBlockStyle}">
+        <Setter Property="Margin" Value="40.0" />
+    </Style>
+
 </ResourceDictionary>
