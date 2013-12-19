@@ -183,7 +183,7 @@
         <Setter Property="Padding" Value="30,10"/>
     </Style>
 
-        <Style x:Key="ContentButton" TargetType="Button">
+    <Style x:Key="ContentButton" TargetType="Button">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="{ThemeResource ButtonForegroundThemeBrush}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ButtonBorderThemeBrush}" />
