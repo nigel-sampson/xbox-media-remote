@@ -24,9 +24,9 @@
             </Border>
         </controls:PlaceholderImage>
 
-        <StackPanel Grid.Row="1">
-            <TextBlock x:Name="File_DisplayName" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap" MaxLines="3" />
-            <TextBlock x:Name="File_ContentType" Style="{StaticResource CaptionTextBlockStyle}" />
+        <StackPanel Grid.Row="1" Margin="0,10,0,0"> 
+            <TextBlock x:Name="File_DisplayName" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap" MaxLines="2" />
+            <TextBlock x:Name="Description" Style="{StaticResource CaptionTextBlockStyle}" />
         </StackPanel>
 
 

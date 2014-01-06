@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Windows.Storage;
+using Windows.UI.Xaml.Media.Imaging;
 using Caliburn.Micro;
 
 namespace XboxMediaRemote.App.ViewModels
@@ -27,6 +28,20 @@ namespace XboxMediaRemote.App.ViewModels
             get
             {
                 return item.Name;
+            }
+        }
+
+        public BitmapImage ThumbnailImage
+        {
+            get;
+            set;
+        }
+
+        public bool HasThumbnailImage
+        {
+            get
+            {
+                return ThumbnailImage != null;
             }
         }
 

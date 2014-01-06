@@ -132,6 +132,12 @@
   <data name="MediaSearch.PlaceholderText" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="MediaTypeImage" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="MediaTypeVideo" xml:space="preserve">
+    <value>Video</value>
+  </data>
   <data name="SearchResultsHeader.Text" xml:space="preserve">
     <value>Search results for</value>
   </data>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.Storage.FileProperties;
@@ -26,19 +27,6 @@ namespace XboxMediaRemote.App.ViewModels
             }
         }
 
-        public BitmapImage ThumbnailImage
-        {
-            get; set;
-        }
-
-        public bool HasThumbnailImage
-        {
-            get
-            {
-                return ThumbnailImage != null;
-            }
-        }
-
         public override async Task LoadThumbnailAsync()
         {
             try
@@ -52,9 +40,9 @@ namespace XboxMediaRemote.App.ViewModels
                     ThumbnailImage.SetSource(thumbnail);
                 }
             }
-            catch (Exception)
+            catch
             {
-                
+                Debug.WriteLine("Unable to load thumbnail for {0}", Folder.Name);
             }
         }
     }

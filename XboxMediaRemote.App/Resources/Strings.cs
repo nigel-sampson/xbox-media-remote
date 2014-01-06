@@ -30,6 +30,14 @@ namespace XboxMediaRemote.App.Resources
 			return String.Format(ResourceLoader.GetString(resource), args);
 		}
 
+        public static string BrowseFolderEmptyText 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("BrowseFolderEmpty/Text"); 
+			}
+        }
+
         public static string GroupsNumberTitle 
 		{
             get 
@@ -59,6 +67,38 @@ namespace XboxMediaRemote.App.Resources
             get 
 			{ 
 				return ResourceLoader.GetString("MediaSearch/PlaceholderText"); 
+			}
+        }
+
+        public static string MediaTypeImage 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("MediaTypeImage"); 
+			}
+        }
+
+        public static string MediaTypeVideo 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("MediaTypeVideo"); 
+			}
+        }
+
+        public static string SearchResultsHeaderText 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("SearchResultsHeader/Text"); 
+			}
+        }
+
+        public static string SearchResultsNoneText 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("SearchResultsNone/Text"); 
 			}
         }
 

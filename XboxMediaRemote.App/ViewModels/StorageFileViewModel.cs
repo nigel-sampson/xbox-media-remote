@@ -5,6 +5,7 @@ using Windows.Storage;
 using Windows.Storage.FileProperties;
 using Windows.UI.Xaml.Media.Imaging;
 using PropertyChanged;
+using XboxMediaRemote.App.Resources;
 
 namespace XboxMediaRemote.App.ViewModels
 {
@@ -17,6 +18,15 @@ namespace XboxMediaRemote.App.ViewModels
             : base(file)
         {
             this.file = file;
+
+            var contentType = file.ContentType;
+
+            if (contentType.StartsWith("image/"))
+                MediaType = MediaType.Image;
+            else if (contentType.StartsWith("video/"))
+                MediaType = MediaType.Video;
+            else
+                MediaType = MediaType.Unknown;
         }
 
         public StorageFile File
@@ -27,17 +37,24 @@ namespace XboxMediaRemote.App.ViewModels
             }
         }
 
-        public BitmapImage ThumbnailImage
+        public MediaType MediaType
         {
-            get;
-            set;
+            get; set;
         }
 
-        public bool HasThumbnailImage
+        public string Description
         {
             get
             {
-                return ThumbnailImage != null;
+                switch (MediaType)
+                {
+                    case MediaType.Image:
+                        return Strings.MediaTypeImage;
+                    case MediaType.Video:
+                        return Strings.MediaTypeVideo;
+                    default:
+                        return String.Empty;
+                }
             }
         }
 
