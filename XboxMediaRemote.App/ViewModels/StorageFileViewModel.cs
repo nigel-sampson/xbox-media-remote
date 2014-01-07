@@ -25,6 +25,8 @@ namespace XboxMediaRemote.App.ViewModels
                 MediaType = MediaType.Image;
             else if (contentType.StartsWith("video/"))
                 MediaType = MediaType.Video;
+            else if (contentType.StartsWith("audio/"))
+                MediaType = MediaType.Audio;
             else
                 MediaType = MediaType.Unknown;
         }

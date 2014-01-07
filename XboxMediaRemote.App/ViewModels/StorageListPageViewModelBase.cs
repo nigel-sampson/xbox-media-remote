@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 using Caliburn.Micro;
+using XboxMediaRemote.App.Events;
 using XboxMediaRemote.Core.Extensions;
 
 namespace XboxMediaRemote.App.ViewModels
@@ -9,11 +10,13 @@ namespace XboxMediaRemote.App.ViewModels
     public class StorageListPageViewModelBase : PageViewModelBase
     {
         private readonly INavigationService navigationService;
+        private readonly IEventAggregator eventAggregator;
 
-        public StorageListPageViewModelBase(INavigationService navigationService) 
+        public StorageListPageViewModelBase(INavigationService navigationService, IEventAggregator eventAggregator) 
             : base(navigationService)
         {
             this.navigationService = navigationService;
+            this.eventAggregator = eventAggregator;
 
             GroupedStorageItems = new BindableCollection<StorageItemGroupViewModel>();
         }
@@ -25,13 +28,18 @@ namespace XboxMediaRemote.App.ViewModels
 
         public void SelectItem(ItemClickEventArgs e)
         {
-            var itemViewModel = (StorageItemViewModel)e.ClickedItem;
-
-            var folderViewModle = itemViewModel as StorageFolderViewModel;
+            var folderViewModle = e.ClickedItem as StorageFolderViewModel;
 
             if (folderViewModle != null)
             {
                 navigationService.NavigateToViewModel<BrowseFolderViewModel>(folderViewModle.Folder);
+            }
+
+            var fileViewModel = e.ClickedItem as StorageFileViewModel;
+
+            if (fileViewModel != null)
+            {
+                eventAggregator.PublishOnUIThread(new MediaSelectedEventArgs(fileViewModel));
             }
         }
 

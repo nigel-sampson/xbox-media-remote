@@ -70,6 +70,14 @@ namespace XboxMediaRemote.App.Resources
 			}
         }
 
+        public static string MediaTypeAudio 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("MediaTypeAudio"); 
+			}
+        }
+
         public static string MediaTypeImage 
 		{
             get 
@@ -83,6 +91,22 @@ namespace XboxMediaRemote.App.Resources
             get 
 			{ 
 				return ResourceLoader.GetString("MediaTypeVideo"); 
+			}
+        }
+
+        public static string PlayToInvalidMediaType 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("PlayToInvalidMediaType"); 
+			}
+        }
+
+        public static string PlayToNoFile 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("PlayToNoFile"); 
 			}
         }
 

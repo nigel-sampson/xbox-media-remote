@@ -9,8 +9,8 @@ namespace XboxMediaRemote.App.ViewModels
     [ImplementPropertyChanged]
     public class BrowseFolderViewModel : StorageListPageViewModelBase
     {
-        public BrowseFolderViewModel(INavigationService navigationService)
-            : base(navigationService)
+        public BrowseFolderViewModel(INavigationService navigationService, IEventAggregator eventAggregator)
+            : base(navigationService, eventAggregator)
         {
 
         }

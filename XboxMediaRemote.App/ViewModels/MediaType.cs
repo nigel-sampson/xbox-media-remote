@@ -6,6 +6,7 @@ namespace XboxMediaRemote.App.ViewModels
     {
         Unknown,
         Image,
-        Video
+        Video,
+        Audio
     }
 }

@@ -132,11 +132,20 @@
   <data name="MediaSearch.PlaceholderText" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="MediaTypeAudio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
   <data name="MediaTypeImage" xml:space="preserve">
     <value>Image</value>
   </data>
   <data name="MediaTypeVideo" xml:space="preserve">
     <value>Video</value>
+  </data>
+  <data name="PlayToInvalidMediaType" xml:space="preserve">
+    <value>Cannot stream current media type.</value>
+  </data>
+  <data name="PlayToNoFile" xml:space="preserve">
+    <value>No media currently selected for Play To.</value>
   </data>
   <data name="SearchResultsHeader.Text" xml:space="preserve">
     <value>Search results for</value>

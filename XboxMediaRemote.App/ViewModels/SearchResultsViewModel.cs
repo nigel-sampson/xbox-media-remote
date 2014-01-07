@@ -9,8 +9,8 @@ namespace XboxMediaRemote.App.ViewModels
 {
     public class SearchResultsViewModel : StorageListPageViewModelBase
     {
-        public SearchResultsViewModel(INavigationService navigationService) 
-            : base(navigationService)
+        public SearchResultsViewModel(INavigationService navigationService, IEventAggregator eventAggregator) 
+            : base(navigationService, eventAggregator)
         {
 
         }

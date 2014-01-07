@@ -30,6 +30,9 @@ namespace XboxMediaRemote.App
                 .Instance(container);
 
             container
+                .Singleton<IEventAggregator, EventAggregator>();
+
+            container
                 .PerRequest<MediaHubViewModel>()
                 .PerRequest<BrowseFolderViewModel>()
                 .PerRequest<SearchResultsViewModel>();

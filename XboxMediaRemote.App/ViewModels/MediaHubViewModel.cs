@@ -13,11 +13,15 @@ namespace XboxMediaRemote.App.ViewModels
         private readonly WinRTContainer container;
         private INavigationService navigationService;
 
-        public MediaHubViewModel(WinRTContainer container)
+        public MediaHubViewModel(WinRTContainer container, IEventAggregator eventAggregator)
         {
             this.container = container;
 
             Servers = new BindableCollection<MediaServerViewModel>();
+
+            PlayTo = new PlayToViewModel(eventAggregator);
+
+            PlayTo.ConductWith(this);
         }
 
         protected override async void OnInitialize()
@@ -70,6 +74,11 @@ namespace XboxMediaRemote.App.ViewModels
         {
             get;
             private set;
+        }
+
+        public PlayToViewModel PlayTo
+        {
+            get; private set;
         }
     }
 }
