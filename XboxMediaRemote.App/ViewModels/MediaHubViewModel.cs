@@ -32,7 +32,6 @@ namespace XboxMediaRemote.App.ViewModels
             {
                 KnownFolders.MusicLibrary,
                 KnownFolders.PicturesLibrary,
-                KnownFolders.Playlists,
                 KnownFolders.VideosLibrary
             };
 
