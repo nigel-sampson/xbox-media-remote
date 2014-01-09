@@ -149,6 +149,9 @@
     <Compile Include="Views\MediaServer\Expanded.xaml.cs">
       <DependentUpon>Expanded.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\PlayToView.xaml.cs">
+      <DependentUpon>PlayToView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SearchResultsView.xaml.cs">
       <DependentUpon>SearchResultsView.xaml</DependentUpon>
     </Compile>
@@ -290,6 +293,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MediaServer\Expanded.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlayToView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

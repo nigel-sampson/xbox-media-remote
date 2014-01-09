@@ -15,6 +15,10 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
         <controls:Sidebar x:Name="HubSidebar" Background="{StaticResource SidebarBackgroundBrush}" RequestedTheme="Dark">
             <controls:Sidebar.ExpandedContentTemplate>
@@ -89,7 +93,10 @@
                 </DataTemplate>
             </controls:Sidebar.CollapsedContentTemplate>
         </controls:Sidebar>
+
+        <Frame x:Name="RootFrame" Grid.Row="0" Grid.Column="1" cm:Message.Attach="RegisterFrame($source)" SourcePageType="views:WelcomeView" DataContext="{x:Null}" />
         
-        <Frame x:Name="RootFrame" Grid.Column="1" cm:Message.Attach="RegisterFrame($source)" SourcePageType="views:WelcomeView" DataContext="{x:Null}" />
+        <ContentControl x:Name="PlayTo" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                        HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
     </Grid>
 </Page>

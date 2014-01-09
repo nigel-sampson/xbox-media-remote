@@ -147,6 +147,12 @@
   <data name="PlayToNoFile" xml:space="preserve">
     <value>No media currently selected for Play To.</value>
   </data>
+  <data name="PlayToNoMediaCaption.Text" xml:space="preserve">
+    <value>Select a file in the browser above to play it to your Xbox.</value>
+  </data>
+  <data name="PlayToNoMediaTitle.Text" xml:space="preserve">
+    <value>No media selected</value>
+  </data>
   <data name="SearchResultsHeader.Text" xml:space="preserve">
     <value>Search results for</value>
   </data>

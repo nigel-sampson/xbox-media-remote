@@ -20,6 +20,9 @@
     <Color x:Key="SidebarBackgroundColor">#FF222222</Color>
     <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="{StaticResource SidebarBackgroundColor}" />
 
+    <Color x:Key="PlayToBackgroundColor">#FF101010</Color>
+    <SolidColorBrush x:Key="PlayToBackgroundBrush" Color="{StaticResource PlayToBackgroundColor}"/>
+
     <SolidColorBrush x:Key="MenuBackgroundBrush" Color="{StaticResource SidebarBackgroundColor}" />
     <SolidColorBrush x:Key="MenuListBoxItemSelectedBrush" Color="{StaticResource XboxGreenColor}" />
     <SolidColorBrush x:Key="MenuListBoxItemHoverBrush" Color="#FF3A3A3A" />

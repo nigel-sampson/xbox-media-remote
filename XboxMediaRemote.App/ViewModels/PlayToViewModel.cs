@@ -107,6 +107,11 @@ namespace XboxMediaRemote.App.ViewModels
         {
             CurrentFile = message.StorageFile;
 
+            ShowPlayToUI();
+        }
+
+        public void ShowPlayToUI()
+        {
             PlayToManager.ShowPlayToUI();
         }
 
