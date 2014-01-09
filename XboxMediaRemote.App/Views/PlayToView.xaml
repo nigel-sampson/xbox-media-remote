@@ -13,21 +13,28 @@
     
     <Grid Background="{StaticResource PlayToBackgroundBrush}" Height="80">
         <Border Visibility="{Binding CurrentFile, Converter={StaticResource InverseVisibility}}">
-            <StackPanel Margin="40,20">
+            <StackPanel Margin="20,10">
                 <TextBlock x:Uid="PlayToNoMediaTitle" Style="{StaticResource TitleTextBlockStyle}"/>
                 <TextBlock x:Uid="PlayToNoMediaCaption" Style="{StaticResource CaptionTextBlockStyle}"/>
             </StackPanel>
         </Border>
-        <Border Visibility="{Binding CurrentFile, Converter={StaticResource Visibility}}">
-            <Button x:Name="ShowPlayToUI" Style="{StaticResource ContentButton}">
-                <StackPanel Margin="40,10" HorizontalAlignment="Left" Orientation="Horizontal">
-                    <Image Source="{Binding CurrentFile.ThumbnailImage}" Width="60" Height="60"/>
+        <Grid Visibility="{Binding CurrentFile, Converter={StaticResource Visibility}}">
+            <Button x:Name="ShowPlayToUI" Style="{StaticResource ContentButton}" HorizontalAlignment="Left">
+                <StackPanel Margin="20,10" Orientation="Horizontal">
+                    <Image x:Name="CurrentFile_ThumbnailImage" Width="60" Height="60"/>
                     <StackPanel Margin="20,0">
-                        <TextBlock Text="{Binding CurrentFile.Name}" Style="{StaticResource TitleTextBlockStyle}"/>
-                        <TextBlock Text="{Binding CurrentFile.Description}" Style="{StaticResource CaptionTextBlockStyle}"/>
+                        <TextBlock x:Name="CurrentFile_Name" Style="{StaticResource TitleTextBlockStyle}"/>
+                        <TextBlock x:Name="CurrentFile_Description" Style="{StaticResource CaptionTextBlockStyle}"/>
                     </StackPanel>
                 </StackPanel>
             </Button>
-        </Border>
+            <StackPanel Margin="20,10" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Image x:Name="SourceIcon" Width="60" Height="60"/>
+                <StackPanel Margin="20,0">
+                    <TextBlock x:Name="SourceName" Style="{StaticResource TitleTextBlockStyle}"/>
+                    <TextBlock x:Name="CurrentConnection_State" Style="{StaticResource CaptionTextBlockStyle}"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>

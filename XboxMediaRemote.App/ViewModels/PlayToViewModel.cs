@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Windows.Media.PlayTo;
+using Windows.Storage.Streams;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 using Caliburn.Micro;
+using PropertyChanged;
 using XboxMediaRemote.App.Events;
 using XboxMediaRemote.App.Resources;
 
 namespace XboxMediaRemote.App.ViewModels
 {
+    [ImplementPropertyChanged]
     public class PlayToViewModel : ViewModelBase, IHandle<MediaSelectedEventArgs>
     {
         private readonly IEventAggregator eventAggregator;
         private PlayToManager playToManager;
+        private PlayToConnection currentConnection;
 
         public PlayToViewModel(IEventAggregator eventAggregator)
         {
@@ -54,7 +58,11 @@ namespace XboxMediaRemote.App.ViewModels
                         if (source == null)
                             args.SourceRequest.DisplayErrorString(Strings.PlayToInvalidMediaType);
                         else
+                        {
                             args.SourceRequest.SetSource(source);
+
+                            CurrentConnection = source.Connection;
+                        }
                     }
                     else
                     {
@@ -67,7 +75,13 @@ namespace XboxMediaRemote.App.ViewModels
 
         private void OnSourceSelected(PlayToManager sender, PlayToSourceSelectedEventArgs args)
         {
-            
+            Execute.OnUIThread(() =>
+            {
+                SourceName = args.FriendlyName;
+
+                SourceIcon = new BitmapImage();
+                SourceIcon.SetSource(args.Icon);    
+            });
         }
 
         private async Task<PlayToSource> CreateSourceAsync()
@@ -116,6 +130,50 @@ namespace XboxMediaRemote.App.ViewModels
         }
 
         public StorageFileViewModel CurrentFile
+        {
+            get;
+            set;
+        }
+
+        public PlayToConnection CurrentConnection
+        {
+            get
+            {
+                return currentConnection;
+            }
+            set
+            {
+                if (currentConnection == value)
+                    return;
+
+                if (currentConnection != null)
+                {
+                    currentConnection.StateChanged -= OnConnectionStateChanged;
+                }
+
+                currentConnection = value;
+
+                if (currentConnection != null)
+                {
+                    currentConnection.StateChanged += OnConnectionStateChanged;
+                }
+
+                NotifyOfPropertyChange();
+            }
+        }
+
+        private void OnConnectionStateChanged(PlayToConnection sender, PlayToConnectionStateChangedEventArgs args)
+        {
+            NotifyOfPropertyChange(() => CurrentConnection);
+        }
+
+        public string SourceName
+        {
+            get;
+            set;
+        }
+
+        public BitmapImage SourceIcon
         {
             get;
             set;
