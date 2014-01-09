@@ -25,7 +25,8 @@
         </StackPanel>
         
         <Grid x:Name="ContentRoot" Grid.Row="2">
-            <SemanticZoom x:Name="ItemsZoom">
+   
+            <SemanticZoom x:Name="ItemsZoom" Style="{StaticResource MediaZoomStyle}">
                 <SemanticZoom.ZoomedInView>
                     <ListView ItemsSource="{Binding Source={StaticResource GroupsViewSource}}" 
                           cm:Message.Attach="[Event ItemClick] = [SelectItem($eventArgs)]"

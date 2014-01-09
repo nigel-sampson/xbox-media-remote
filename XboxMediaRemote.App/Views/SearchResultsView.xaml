@@ -30,7 +30,7 @@
         </StackPanel>
 
         <Grid x:Name="ContentRoot" Grid.Row="2">
-            <SemanticZoom x:Name="ResultsZoom">
+            <SemanticZoom x:Name="ResultsZoom" ScrollViewer.HorizontalScrollMode="Disabled">
                 <SemanticZoom.ZoomedInView>
                     <ListView ItemsSource="{Binding Source={StaticResource ResultsViewSource}}"
                           micro:Message.Attach="[Event ItemClick] = [SelectItem($eventArgs)]" 
