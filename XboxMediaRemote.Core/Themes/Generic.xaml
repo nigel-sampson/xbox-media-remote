@@ -29,7 +29,7 @@
                                         <PaneThemeTransition Edge="Left" />
                                     </TransitionCollection>
                                 </Popup.ChildTransitions>
-                                <Border x:Name="PopupRoot" Width="460" Background="{TemplateBinding Background}">
+                                <Border x:Name="PopupRoot" Width="320" Background="{TemplateBinding Background}">
                                     <ContentPresenter ContentTemplate="{TemplateBinding ExpandedContentTemplate}"
                                                       ContentTemplateSelector="{TemplateBinding ExpandedContentTemplateSelector}"
                                                       ContentTransitions="{TemplateBinding ExpandedContentTransitions}"/>
@@ -48,7 +48,7 @@
                                             <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Collapsed" />
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ControlRoot" Storyboard.TargetProperty="Width">
-                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="460" />
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="320" />
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
