@@ -120,6 +120,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.tt</DependentUpon>
     </Compile>
+    <Compile Include="Resources\TemplateSelectors\TypeIconTemplateSelector.cs" />
     <Compile Include="ViewModels\AlphaNumericGroups.cs" />
     <Compile Include="ViewModels\BrowseFolderViewModel.cs" />
     <Compile Include="ViewModels\GroupViewModel.cs" />

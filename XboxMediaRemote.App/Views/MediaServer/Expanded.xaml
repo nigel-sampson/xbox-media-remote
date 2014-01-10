@@ -16,7 +16,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Path Height="15" Stretch="Uniform" Fill="#FFFFFFFF" Data="F1 M 109.333,40L 109.333,1.52588e-005L 69.3333,1.52588e-005L 69.3333,16L 58.6667,16L 58.6667,1.52588e-005L 50.6667,1.52588e-005L 50.6667,62.6667L 40,62.6667L 40,46.6667L 0,46.6667L 0,86.6667L 40,86.6667L 40,70.6667L 50.6667,70.6667L 50.6667,133.333L 58.6667,133.333L 58.6667,117.333L 69.3333,117.333L 69.3333,133.333L 109.333,133.333L 109.333,93.3334L 69.3333,93.3334L 69.3333,109.333L 58.6667,109.333L 58.6667,24L 69.3333,24L 69.3333,40L 109.333,40 Z "/>
+        <ContentControl Height="15" Content="{Binding Type}" ContentTemplateSelector="{StaticResource IconTemplateSelector}" />
 
         <TextBlock x:Name="Name" Grid.Column="1" Margin="10,0,0,0" TextTrimming="CharacterEllipsis"/>
     </Grid>

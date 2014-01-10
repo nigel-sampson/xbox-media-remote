@@ -30,15 +30,15 @@ namespace XboxMediaRemote.App.ViewModels
 
             var localFolders = new[]
             {
-                KnownFolders.MusicLibrary,
-                KnownFolders.PicturesLibrary,
-                KnownFolders.VideosLibrary
+                new { Folder = KnownFolders.MusicLibrary, Type = MediaType.Audio },
+                new { Folder = KnownFolders.PicturesLibrary, Type = MediaType.Image },
+                new { Folder = KnownFolders.VideosLibrary, Type = MediaType.Video }
             };
 
-            var localViewModels = localFolders.Select(f => new MediaServerViewModel(f, isLocal: true));
+            var localViewModels = localFolders.Select(f => new MediaServerViewModel(f.Folder, isLocal: true, type: f.Type));
 
             var serverFolders = await KnownFolders.MediaServerDevices.GetFoldersAsync();
-            var serverViewModels = serverFolders.Select(f => new MediaServerViewModel(f, isLocal: false));
+            var serverViewModels = serverFolders.Select(f => new MediaServerViewModel(f, isLocal: false, type: MediaType.Unknown));
 
             Servers.AddRange(localViewModels);
             Servers.AddRange(serverViewModels);

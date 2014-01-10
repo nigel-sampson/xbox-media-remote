@@ -3,7 +3,8 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:cm="using:Caliburn.Micro"
-    xmlns:converters="using:XboxMediaRemote.Core.Converters">
+    xmlns:converters="using:XboxMediaRemote.Core.Converters"
+    xmlns:templateSelectors="using:XboxMediaRemote.App.Resources.TemplateSelectors">
 
     <cm:CaliburnApplication.Resources>
         <ResourceDictionary>
@@ -18,6 +19,12 @@
             <converters:VisibilityConverter x:Key="Visibility" />
             <converters:VisibilityConverter x:Key="InverseVisibility" Inverse="True" />
             
+            <templateSelectors:TypeIconTemplateSelector x:Key="IconTemplateSelector"
+                                                        Music="{StaticResource MusicIconTemplate}"
+                                                        Pictures="{StaticResource PicturesIconTemplate}"
+                                                        Video="{StaticResource VideosIconTemplate}"
+                                                        Unknown="{StaticResource ServerIconTemplate}"/>
+
         </ResourceDictionary>
     </cm:CaliburnApplication.Resources>
     
