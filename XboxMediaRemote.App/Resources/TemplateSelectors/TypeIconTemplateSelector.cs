@@ -9,6 +9,9 @@ namespace XboxMediaRemote.App.Resources.TemplateSelectors
     {
         protected override DataTemplate SelectTemplateCore(object item, DependencyObject container)
         {
+            if (item == null)
+                return null;
+
             var type = (MediaType)item;
 
             switch (type)

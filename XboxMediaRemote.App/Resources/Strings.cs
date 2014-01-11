@@ -110,6 +110,22 @@ namespace XboxMediaRemote.App.Resources
 			}
         }
 
+        public static string PlayToNoMediaCaptionText 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("PlayToNoMediaCaption/Text"); 
+			}
+        }
+
+        public static string PlayToNoMediaTitleText 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("PlayToNoMediaTitle/Text"); 
+			}
+        }
+
         public static string SearchResultsHeaderText 
 		{
             get 
@@ -123,6 +139,22 @@ namespace XboxMediaRemote.App.Resources
             get 
 			{ 
 				return ResourceLoader.GetString("SearchResultsNone/Text"); 
+			}
+        }
+
+        public static string SettingsAbout 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("SettingsAbout"); 
+			}
+        }
+
+        public static string SettingsPrivacyPolicy 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("SettingsPrivacyPolicy"); 
 			}
         }
 

@@ -130,6 +130,9 @@
     <Compile Include="ViewModels\PageViewModelBase.cs" />
     <Compile Include="ViewModels\PlayToViewModel.cs" />
     <Compile Include="ViewModels\SearchResultsViewModel.cs" />
+    <Compile Include="ViewModels\Settings\AboutViewModel.cs" />
+    <Compile Include="ViewModels\Settings\CreditViewModel.cs" />
+    <Compile Include="ViewModels\Settings\PrivacyPolicyViewModel.cs" />
     <Compile Include="ViewModels\StorageFileViewModel.cs" />
     <Compile Include="ViewModels\StorageFolderViewModel.cs" />
     <Compile Include="ViewModels\StorageItemGroupViewModel.cs" />
@@ -155,6 +158,12 @@
     </Compile>
     <Compile Include="Views\SearchResultsView.xaml.cs">
       <DependentUpon>SearchResultsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\PrivacyPolicyView.xaml.cs">
+      <DependentUpon>PrivacyPolicyView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StorageFileView.xaml.cs">
       <DependentUpon>StorageFileView.xaml</DependentUpon>
@@ -302,6 +311,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SearchResultsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Settings\AboutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Settings\PrivacyPolicyView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

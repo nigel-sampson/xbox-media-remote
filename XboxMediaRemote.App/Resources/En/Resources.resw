@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutTitle.Text" xml:space="preserve">
+    <value>Xbox Media Remote</value>
+  </data>
+  <data name="AuthorCaption.Text" xml:space="preserve">
+    <value>Compiled Experience</value>
+  </data>
+  <data name="AuthorTitle.Text" xml:space="preserve">
+    <value>Nigel Sampson</value>
+  </data>
   <data name="BrowseFolderEmpty.Text" xml:space="preserve">
     <value>Folder contains no files.</value>
+  </data>
+  <data name="CreditsTitle.Text" xml:space="preserve">
+    <value>Libraries Used</value>
   </data>
   <data name="GroupsNumberTitle" xml:space="preserve">
     <value>0 - 9</value>
@@ -153,11 +165,20 @@
   <data name="PlayToNoMediaTitle.Text" xml:space="preserve">
     <value>No media selected</value>
   </data>
+  <data name="PrivacyPolicyContent.Text" xml:space="preserve">
+    <value>This app does not collect, store or transmit any personal data of any kind.</value>
+  </data>
   <data name="SearchResultsHeader.Text" xml:space="preserve">
     <value>Search results for</value>
   </data>
   <data name="SearchResultsNone.Text" xml:space="preserve">
     <value>No files or folders could be found that match the query.</value>
+  </data>
+  <data name="SettingsAbout" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="SettingsPrivacyPolicy" xml:space="preserve">
+    <value>Privacy Policy</value>
   </data>
   <data name="WelcomeApp.Text" xml:space="preserve">
     <value>to Xbox Media Remote</value>

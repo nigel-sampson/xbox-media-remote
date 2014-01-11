@@ -58,4 +58,8 @@
     <SolidColorBrush x:Key="ProgressBarForegroundThemeBrush" Color="{StaticResource XboxGreenColor}" />
     <SolidColorBrush x:Key="ProgressBarIndeterminateForegroundThemeBrush" Color="{StaticResource XboxGreenColor}" />
 
+    <SolidColorBrush x:Key="HyperlinkForegroundThemeBrush" Color="{StaticResource XboxDarkGreenColor}" />
+    <SolidColorBrush x:Key="HyperlinkPointerOverForegroundThemeBrush" Color="{StaticResource XboxGreenColor}" />
+    <SolidColorBrush x:Key="HyperlinkPressedForegroundThemeBrush" Color="{StaticResource XboxLightGreenColor}" />
+
 </ResourceDictionary>

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using Windows.ApplicationModel.Activation;
 using Caliburn.Micro;
+using XboxMediaRemote.App.Resources;
 using XboxMediaRemote.App.ViewModels;
+using XboxMediaRemote.App.ViewModels.Settings;
 
 namespace XboxMediaRemote.App
 {
@@ -35,7 +37,14 @@ namespace XboxMediaRemote.App
             container
                 .PerRequest<MediaHubViewModel>()
                 .PerRequest<BrowseFolderViewModel>()
-                .PerRequest<SearchResultsViewModel>();
+                .PerRequest<SearchResultsViewModel>()
+                .PerRequest<AboutViewModel>()
+                .PerRequest<PrivacyPolicyViewModel>();
+
+            var settings = container.RegisterSettingsService();
+
+            settings.RegisterFlyoutCommand<AboutViewModel>(Strings.SettingsAbout);
+            settings.RegisterFlyoutCommand<PrivacyPolicyViewModel>(Strings.SettingsPrivacyPolicy);
         }
 
         protected override void BuildUp(object instance)
