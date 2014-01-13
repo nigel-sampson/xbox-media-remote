@@ -62,4 +62,9 @@
     <SolidColorBrush x:Key="HyperlinkPointerOverForegroundThemeBrush" Color="{StaticResource XboxGreenColor}" />
     <SolidColorBrush x:Key="HyperlinkPressedForegroundThemeBrush" Color="{StaticResource XboxLightGreenColor}" />
 
+    <SolidColorBrush x:Key="ComboBoxItemSelectedBackgroundThemeBrush" Color="{StaticResource XboxGreenColor}" />
+    <SolidColorBrush x:Key="ComboBoxItemSelectedPointerOverBackgroundThemeBrush" Color="{StaticResource XboxLightGreenColor}" />
+    <SolidColorBrush x:Key="ComboBoxSelectedBackgroundThemeBrush" Color="{StaticResource XboxGreenColor}" />
+    <SolidColorBrush x:Key="ComboBoxSelectedPointerOverBackgroundThemeBrush" Color="{StaticResource XboxLightGreenColor}" />
+
 </ResourceDictionary>
