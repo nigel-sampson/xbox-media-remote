@@ -106,7 +106,10 @@ namespace XboxMediaRemote.App.ViewModels
 
                     var videoStream = await CurrentFile.File.OpenReadAsync();
 
-                    var mediaElement = new MediaElement();
+                    var mediaElement = new MediaElement
+                    {
+                        AutoPlay = false
+                    };
 
                     mediaElement.SetSource(videoStream, CurrentFile.File.ContentType);
 
