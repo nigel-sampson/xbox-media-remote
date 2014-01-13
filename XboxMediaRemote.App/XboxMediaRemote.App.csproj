@@ -121,11 +121,15 @@
       <DependentUpon>Strings.tt</DependentUpon>
     </Compile>
     <Compile Include="Resources\TemplateSelectors\TypeIconTemplateSelector.cs" />
+    <Compile Include="Services\IApplicationSettingsService.cs" />
+    <Compile Include="Services\ApplicationSettingsService.cs" />
     <Compile Include="ViewModels\AlphaNumericGroups.cs" />
     <Compile Include="ViewModels\BrowseFolderViewModel.cs" />
     <Compile Include="ViewModels\GroupViewModel.cs" />
     <Compile Include="ViewModels\MediaHubViewModel.cs" />
     <Compile Include="ViewModels\MediaServerViewModel.cs" />
+    <Compile Include="ViewModels\MediaSort.cs" />
+    <Compile Include="ViewModels\MediaSortViewModel.cs" />
     <Compile Include="ViewModels\MediaType.cs" />
     <Compile Include="ViewModels\PageViewModelBase.cs" />
     <Compile Include="ViewModels\PlayToViewModel.cs" />

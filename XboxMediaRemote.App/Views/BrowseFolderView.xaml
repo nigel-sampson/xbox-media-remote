@@ -24,6 +24,8 @@
             <TextBlock x:Name="Parameter_DisplayName" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,0,0,5" FontWeight="Bold" />    
         </StackPanel>
         
+        <ComboBox x:Name="SortOptions" DisplayMemberPath="Description" Grid.Row="1" Margin="40,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        
         <Grid x:Name="ContentRoot" Grid.Row="2">
    
             <SemanticZoom x:Name="ItemsZoom" Style="{StaticResource MediaZoomStyle}">

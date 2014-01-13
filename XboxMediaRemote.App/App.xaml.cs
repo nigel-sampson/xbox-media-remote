@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Windows.ApplicationModel.Activation;
 using Caliburn.Micro;
 using XboxMediaRemote.App.Resources;
+using XboxMediaRemote.App.Services;
 using XboxMediaRemote.App.ViewModels;
 using XboxMediaRemote.App.ViewModels.Settings;
 
@@ -32,7 +33,8 @@ namespace XboxMediaRemote.App
                 .Instance(container);
 
             container
-                .Singleton<IEventAggregator, EventAggregator>();
+                .Singleton<IEventAggregator, EventAggregator>()
+                .Singleton<IApplicationSettingsService, ApplicationSettingsService>();
 
             container
                 .PerRequest<MediaHubViewModel>()

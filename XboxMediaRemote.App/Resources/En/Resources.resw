@@ -132,11 +132,26 @@
   <data name="CreditsTitle.Text" xml:space="preserve">
     <value>Libraries Used</value>
   </data>
+  <data name="GroupFolders" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="GroupMusic" xml:space="preserve">
+    <value>Music</value>
+  </data>
+  <data name="GroupOther" xml:space="preserve">
+    <value>Other</value>
+  </data>
   <data name="GroupsNumberTitle" xml:space="preserve">
     <value>0 - 9</value>
   </data>
+  <data name="GroupsPictures" xml:space="preserve">
+    <value>Pictures</value>
+  </data>
   <data name="GroupsSymbolTitle" xml:space="preserve">
     <value>&amp;</value>
+  </data>
+  <data name="GroupVideos" xml:space="preserve">
+    <value>Videos</value>
   </data>
   <data name="MediaHubTitle.Text" xml:space="preserve">
     <value>Xbox Media Remote</value>
@@ -145,10 +160,10 @@
     <value>Search</value>
   </data>
   <data name="MediaTypeAudio" xml:space="preserve">
-    <value>Audio</value>
+    <value>Music</value>
   </data>
   <data name="MediaTypeImage" xml:space="preserve">
-    <value>Image</value>
+    <value>Picture</value>
   </data>
   <data name="MediaTypeVideo" xml:space="preserve">
     <value>Video</value>
@@ -188,5 +203,14 @@
   </data>
   <data name="WelcomeTitle.Text" xml:space="preserve">
     <value>Welcome</value>
+  </data>
+  <data name="MediaSortAlphabetical" xml:space="preserve">
+    <value>By a - z</value>
+  </data>
+  <data name="MediaSortDateCreated" xml:space="preserve">
+    <value>By date added</value>
+  </data>
+  <data name="MediaSortType" xml:space="preserve">
+    <value>By file type</value>
   </data>
 </root>

@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 using Caliburn.Micro;
 using XboxMediaRemote.App.Events;
+using XboxMediaRemote.App.Services;
 using XboxMediaRemote.Core.Extensions;
 
 namespace XboxMediaRemote.App.ViewModels

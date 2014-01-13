@@ -30,8 +30,8 @@ namespace XboxMediaRemote.App.ViewModels
 
             var localFolders = new[]
             {
-                new { Folder = KnownFolders.MusicLibrary, Type = MediaType.Audio },
-                new { Folder = KnownFolders.PicturesLibrary, Type = MediaType.Image },
+                new { Folder = KnownFolders.MusicLibrary, Type = MediaType.Music },
+                new { Folder = KnownFolders.PicturesLibrary, Type = MediaType.Picture },
                 new { Folder = KnownFolders.VideosLibrary, Type = MediaType.Video }
             };
 

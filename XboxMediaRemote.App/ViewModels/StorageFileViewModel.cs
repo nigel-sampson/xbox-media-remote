@@ -22,11 +22,11 @@ namespace XboxMediaRemote.App.ViewModels
             var contentType = file.ContentType;
 
             if (contentType.StartsWith("image/"))
-                MediaType = MediaType.Image;
+                MediaType = MediaType.Picture;
             else if (contentType.StartsWith("video/"))
                 MediaType = MediaType.Video;
             else if (contentType.StartsWith("audio/"))
-                MediaType = MediaType.Audio;
+                MediaType = MediaType.Music;
             else
                 MediaType = MediaType.Unknown;
         }
@@ -50,7 +50,7 @@ namespace XboxMediaRemote.App.ViewModels
             {
                 switch (MediaType)
                 {
-                    case MediaType.Image:
+                    case MediaType.Picture:
                         return Strings.MediaTypeImage;
                     case MediaType.Video:
                         return Strings.MediaTypeVideo;

@@ -88,7 +88,7 @@ namespace XboxMediaRemote.App.ViewModels
         {
             switch (CurrentFile.MediaType)
             {
-                case MediaType.Image:
+                case MediaType.Picture:
 
                     var imageStream = await CurrentFile.File.OpenReadAsync();
 

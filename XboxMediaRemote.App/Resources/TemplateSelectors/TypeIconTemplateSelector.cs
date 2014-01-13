@@ -16,9 +16,9 @@ namespace XboxMediaRemote.App.Resources.TemplateSelectors
 
             switch (type)
             {
-                case MediaType.Audio:
+                case MediaType.Music:
                     return Music;
-                case MediaType.Image:
+                case MediaType.Picture:
                     return Pictures;
                 case MediaType.Video:
                     return Video;

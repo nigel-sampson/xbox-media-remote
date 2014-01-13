@@ -4,6 +4,7 @@ using Windows.Storage;
 using Windows.Storage.FileProperties;
 using Windows.Storage.Search;
 using Caliburn.Micro;
+using XboxMediaRemote.App.Services;
 
 namespace XboxMediaRemote.App.ViewModels
 {

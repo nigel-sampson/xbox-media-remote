@@ -30,11 +30,67 @@ namespace XboxMediaRemote.App.Resources
 			return String.Format(ResourceLoader.GetString(resource), args);
 		}
 
+        public static string AboutTitleText 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("AboutTitle/Text"); 
+			}
+        }
+
+        public static string AuthorCaptionText 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("AuthorCaption/Text"); 
+			}
+        }
+
+        public static string AuthorTitleText 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("AuthorTitle/Text"); 
+			}
+        }
+
         public static string BrowseFolderEmptyText 
 		{
             get 
 			{ 
 				return ResourceLoader.GetString("BrowseFolderEmpty/Text"); 
+			}
+        }
+
+        public static string CreditsTitleText 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("CreditsTitle/Text"); 
+			}
+        }
+
+        public static string GroupFolders 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("GroupFolders"); 
+			}
+        }
+
+        public static string GroupMusic 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("GroupMusic"); 
+			}
+        }
+
+        public static string GroupOther 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("GroupOther"); 
 			}
         }
 
@@ -46,11 +102,27 @@ namespace XboxMediaRemote.App.Resources
 			}
         }
 
+        public static string GroupsPictures 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("GroupsPictures"); 
+			}
+        }
+
         public static string GroupsSymbolTitle 
 		{
             get 
 			{ 
 				return ResourceLoader.GetString("GroupsSymbolTitle"); 
+			}
+        }
+
+        public static string GroupVideos 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("GroupVideos"); 
 			}
         }
 
@@ -126,6 +198,14 @@ namespace XboxMediaRemote.App.Resources
 			}
         }
 
+        public static string PrivacyPolicyContentText 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("PrivacyPolicyContent/Text"); 
+			}
+        }
+
         public static string SearchResultsHeaderText 
 		{
             get 
@@ -179,6 +259,30 @@ namespace XboxMediaRemote.App.Resources
             get 
 			{ 
 				return ResourceLoader.GetString("WelcomeTitle/Text"); 
+			}
+        }
+
+        public static string MediaSortAlphabetical 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("MediaSortAlphabetical"); 
+			}
+        }
+
+        public static string MediaSortDateCreated 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("MediaSortDateCreated"); 
+			}
+        }
+
+        public static string MediaSortType 
+		{
+            get 
+			{ 
+				return ResourceLoader.GetString("MediaSortType"); 
 			}
         }
 

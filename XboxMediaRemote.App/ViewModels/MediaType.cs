@@ -5,8 +5,8 @@ namespace XboxMediaRemote.App.ViewModels
     public enum MediaType
     {
         Unknown,
-        Image,
+        Picture,
         Video,
-        Audio
+        Music
     }
 }
