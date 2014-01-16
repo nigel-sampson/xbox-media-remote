@@ -76,13 +76,16 @@ namespace XboxMediaRemote.Core.Controls
 
             if (newBitmapValue != null)
             {
-                HideImage();
+                if (newBitmapValue.PixelWidth > 0 && newBitmapValue.PixelHeight > 0)
+                {
+                    ShowImage();
+                }
+                else
+                {
+                    HideImage();        
+                }
 
                 newBitmapValue.ImageOpened += OnBitmapImageLoaded;
-
-                if (newBitmapValue.PixelWidth > 0 && newBitmapValue.PixelHeight > 0)
-                    ShowImage();
-
             }
             else if (newValue != null)
             {
