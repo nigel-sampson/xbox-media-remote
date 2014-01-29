@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="XboxMediaRemote.App.Views.MediaServer.Expanded"
+    x:Class="XboxMediaRemote.App.Views.MediaServer.CollapsedView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -10,14 +10,9 @@
     d:DesignWidth="400"
     d:DataContext="{d:DesignInstance viewModels:MediaServerViewModel, IsDesignTimeCreatable=False}">
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+    <Grid Width="20">
 
-        <ContentControl Height="15" Content="{Binding Type}" ContentTemplateSelector="{StaticResource IconTemplateSelector}" />
-
-        <TextBlock x:Name="Name" Grid.Column="1" Margin="10,0,0,0" TextTrimming="CharacterEllipsis"/>
+        <ContentControl Height="15" Content="{Binding Type}" ContentTemplateSelector="{StaticResource IconTemplateSelector}"
+                        ToolTipService.ToolTip="{Binding Name}"/>
     </Grid>
 </UserControl>

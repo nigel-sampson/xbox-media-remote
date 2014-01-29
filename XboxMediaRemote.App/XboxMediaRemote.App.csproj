@@ -151,11 +151,11 @@
     <Compile Include="Views\MediaHubView.xaml.cs">
       <DependentUpon>MediaHubView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MediaServer\Collapsed.xaml.cs">
-      <DependentUpon>Collapsed.xaml</DependentUpon>
+    <Compile Include="Views\MediaServer\CollapsedView.xaml.cs">
+      <DependentUpon>CollapsedView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MediaServer\Expanded.xaml.cs">
-      <DependentUpon>Expanded.xaml</DependentUpon>
+    <Compile Include="Views\MediaServer\ExpandedView.xaml.cs">
+      <DependentUpon>ExpandedView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PlayToView.xaml.cs">
       <DependentUpon>PlayToView.xaml</DependentUpon>
@@ -302,11 +302,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MediaServer\Collapsed.xaml">
+    <Page Include="Views\MediaServer\CollapsedView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MediaServer\Expanded.xaml">
+    <Page Include="Views\MediaServer\ExpandedView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -2,9 +2,9 @@
 
 namespace XboxMediaRemote.App.Views.MediaServer
 {
-    public sealed partial class Collapsed
+    public sealed partial class CollapsedView
     {
-        public Collapsed()
+        public CollapsedView()
         {
             InitializeComponent();
         }
